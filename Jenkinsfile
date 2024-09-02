@@ -35,14 +35,12 @@ stages {
                 }
               sh 'docker-compose up -d'
            }
-         } 
-            }
-        }
-    }
+        } 
+            
 
-post {
-        always {
-            echo 'Pipeline finished.'
+       post {
+          always {
+              echo 'Pipeline finished.'
         }
     }
 
