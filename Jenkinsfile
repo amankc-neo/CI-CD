@@ -29,6 +29,10 @@ stages {
         }
        stage('Deploy') {
            steps {
+               script {
+                    dockerImage.push()
+                    dockerImage.run('-d -p 3000:3000')
+                }
               sh 'docker-compose up -d'
            }
          } 
@@ -41,4 +45,5 @@ post {
             echo 'Pipeline finished.'
         }
     }
+
 }
