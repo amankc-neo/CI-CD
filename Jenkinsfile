@@ -1,11 +1,11 @@
 pipeline {
     agent any
 
-    environment {
+environment {
         DOCKER_IMAGE = 'your-username/ci-cd-node-app'
     }
 
-    stages {
+stages {
         stage('Checkout') {
             steps {
                 git 'https://github.com/your-username/ci-cd-node-app.git'
@@ -37,7 +37,7 @@ pipeline {
         }
     }
 
-    post {
+post {
         always {
             echo 'Pipeline finished.'
         }
