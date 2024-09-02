@@ -2,13 +2,13 @@ pipeline {
     agent any
 
 environment {
-        DOCKER_IMAGE = 'your-username/ci-cd-node-app'
+        DOCKER_IMAGE = 'sampleapp/v2'
     }
 
 stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/ci-cd-node-app.git'
+                git 'https://github.com/amankc-neo/CI-CD.git'
             }
         }
         stage('Build') {
